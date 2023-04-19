@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import SkillList from './SkillList';
 import NewSkillForm from './NewSkillForm';
@@ -14,11 +14,15 @@ function App() {
     {name: "Python", level: 2},
   ]);
   
+  function handleAddSkill(newSkills){
+    setSkills((skills) => [...skills, newSkills])
+  }
+
   return (
     <div className="App">
      <h1>React Dev Skills</h1>
       <SkillList skills={skills}/>
-      <NewSkillForm/>
+      <NewSkillForm handleAddSkill={handleAddSkill}/>
     </div>
   );
 }
