@@ -1,13 +1,11 @@
 import React from "react";
 import SkillListItem from "./SkillListItem";
 
-function SkillList() {
+function SkillList(props) {
     return(
     <>
     <ul>
-        <SkillListItem/>
-        <SkillListItem/>
-        <SkillListItem/>
+        {props.skills.map((skill, idx) => (<SkillListItem skill={skill} key={idx+skill} index={idx}/>))}
     </ul>
    
     </>

@@ -5,7 +5,7 @@ function NewSkillForm(){
         <>
         <form action="">
             <label htmlFor="">Skill </label>
-            <input type="text"/>
+            <input type="text"/> <br />
             <label htmlFor="">Level</label>
             <select name="options" id="">
                 <option value="1">1</option>
