@@ -2,15 +2,17 @@ import logo from './logo.svg';
 import './App.css';
 import SkillList from './SkillList';
 import NewSkillForm from './NewSkillForm';
+import { useState } from 'react';
 
-const skills = [
+
+
+function App() {
+  const [skills, setSkills] = useState([
     {name: "HTML", level: 5},
     {name: "CSS", level: 3},
     {name: "Javascript", level: 4},
     {name: "Python", level: 2},
-  ];
-
-function App() {
+  ]);
   
   return (
     <div className="App">
